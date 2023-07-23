@@ -3,6 +3,7 @@ import { ContactContext } from "../context/ContactContext";
 import { getContacts } from "../components/helpers/getContact";
 import { addContact } from "../components/helpers/addContact";
 import { deleteTask } from "../components/helpers/deleteTask";
+import { v4 as uuid } from 'uuid';
 
 export const ContactsPage = () => {
     const { contacts, createContact, salute } = useContext(ContactContext);
@@ -12,13 +13,13 @@ export const ContactsPage = () => {
         phone: "47673874",
         email: "johncage@gmail.com",
         avatar: "https://www.bruceduffie.com/cage5.jpg",
-        id: "67"
     };
 
-    // const handleClick = async () => {
-    //     const data = await addContact(obj);
-    //     createContact(contacts, data);
-    // };
+    const handleClick = async () => {
+        const data = await addContact(obj, uuid());
+        createContact(contacts);
+        getAllContacts();
+    };
 
     const getAllContacts = async () => {
         const data = await getContacts();
@@ -40,7 +41,7 @@ export const ContactsPage = () => {
 
 
             <div className="d-grid gap-2">
-                {/* <button onClick={ handleClick } type="button" name="" id="" className="btn btn-primary">Button</button> */ }
+                <button onClick={ handleClick } type="button" name="" id="" className="btn btn-primary">Create contact</button>
             </div>
         </div>
 

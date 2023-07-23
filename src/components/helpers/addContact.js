@@ -1,5 +1,5 @@
-export const addContact = async (contactObject) => {
-    const { name, address, phone, email, avatar, id } = contactObject;
+export const addContact = async (contactObject, id) => {
+    const { name, address, phone, email, avatar } = contactObject;
     const url = "http://localhost:8000/";
     const endpoint = "contacts";
 
