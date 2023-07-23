@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Layout } from './views/Layout';
+import { Layout } from './Layout';
+
 
 const App = () => {
 
   return (
-    <>
-      <BrowserRouter>
-        <Layout />
-      </BrowserRouter>
-    </>
+
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
+
   );
 };
 
