@@ -1,6 +1,6 @@
 import React from 'react';
-
-export const Home = () => {
+// write routes here!!!
+export const Layout = () => {
     return (
         <div>Home</div>
     );

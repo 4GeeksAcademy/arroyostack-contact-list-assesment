@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ContactContext } from "./contactContext";
 
 export const ContactProvider = ({ children }) => {
@@ -7,7 +8,7 @@ export const ContactProvider = ({ children }) => {
         setContact(contactObject);
 
         return (
-            <ContactContext.Provider value={ { contact, setContact } }>
+            <ContactContext.Provider value={ { contact, createContact } }>
                 { children }
             </ContactContext.Provider>
         );

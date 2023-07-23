@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Home } from './components/Home';
+import { Layout } from './views/Layout';
 
-const Layout = () => {
+const App = () => {
 
   return (
     <>
       <BrowserRouter>
-        <Home />
+        <Layout />
       </BrowserRouter>
     </>
   );
 };
 
-export default Layout;
+export default App;
