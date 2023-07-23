@@ -7,6 +7,14 @@
             "email": "johncage@gmail.com",
             "avatar": "https://www.bruceduffie.com/cage5.jpg",
             "id": "1"
+        },
+        {
+            "name": "mori",
+            "address": "34 Cake Avenue, Manhattan",
+            "phone": "47673874",
+            "email": "johncage@gmail.com",
+            "avatar": "https://www.bruceduffie.com/cage5.jpg",
+            "id": "2"
         }
     ]
 }

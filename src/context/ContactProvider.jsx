@@ -3,14 +3,14 @@ import { ContactContext } from "./ContactContext";
 
 
 export const ContactProvider = ({ children }) => {
-    const [ contact, setContact ] = useState([]);
+    const [ contacts, setContacts ] = useState([]);
 
     const createContact = (userObject) => {
-        setContact(userObject);
+        setContacts(userObject);
     };
 
     return (
-        <ContactContext.Provider value={ { contact, createContact, salute: { greet: "hominawer" } } }>
+        <ContactContext.Provider value={ { contacts, createContact, salute: { greet: "hominawer" } } }>
             { children }
         </ContactContext.Provider>
     );
