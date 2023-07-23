@@ -1,23 +1,25 @@
-export const addTask = async (task, id) => {
-
+export const addContact = async (contactObject) => {
+    const { name, address, phone, email, avatar, id } = contactObject;
     const url = "http://localhost:8000/";
-    const endpoint = "tasks";
+    const endpoint = "contacts";
 
     const myHeaders = new Headers();
     myHeaders.append("Accept", "application/json");
     myHeaders.append("Content-Type", "application/json");
 
     const raw = JSON.stringify({
-        "body": task,
-        "id": id,
-        "progress": "false"
+        "name": name,
+        "address": address,
+        "phone": phone,
+        "email": email,
+        "avatar": avatar,
+        "id": id
     });
 
     const requestOptions = {
         method: 'POST',
         headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
+        body: raw
     };
 
     try {
@@ -27,7 +29,7 @@ export const addTask = async (task, id) => {
         return data;
 
     } catch(error) {
-        console.log(err, "This was catch by catch block 'addTask'");
+        console.log(error, "This was catch by catch block 'addTask'");
 
     }
 }

@@ -1,5 +1,5 @@
 import { ContactProvider } from './context/ContactProvider';
-import { ContactsPage } from './components/ContactsPage';
+import { ContactsPage } from './views/ContactsPage';
 import { Route, Routes } from 'react-router-dom';
 
 export const Layout = () => {
