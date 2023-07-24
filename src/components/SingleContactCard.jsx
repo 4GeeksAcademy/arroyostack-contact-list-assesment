@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const SingleContactCard = ({ contact }) => {
     return (
         <div className="card-color p-2 hide-show">
-            <Link to={ `profile/${ contact.id }` } state={ contact }><i className="bi bi-pencil-square"></i>
+            <Link to={ `profile/${ contact.id }` } state={ contact }>
 
                 <h5 className="card-title m-3 ms-0 text-info">{ contact.name }</h5>
 
