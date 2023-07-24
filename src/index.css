@@ -4,6 +4,7 @@ body {
     background: url('https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 a {
@@ -29,4 +30,21 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.bg {
+    height: inherit;
+    background-image: url(http://placekitten.com/200/300);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hide-show form {
+    display: none;
+}
+
+.hide-show:hover form {
+    display: block;
 }

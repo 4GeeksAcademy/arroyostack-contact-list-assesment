@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { addContact } from './helpers/addContact';
+import { addContact } from '../components/helpers/addContact';
 import { ContactContext } from '../context/ContactContext';
 import { v4 as uuid } from 'uuid';
 import { Navigate } from "react-router-dom";
