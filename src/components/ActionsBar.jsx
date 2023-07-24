@@ -28,9 +28,9 @@ export const ActionsBar = ({ contact }) => {
             <form onSubmit={ null }>
                 <button onClick={ hanleDelete } type="button" className="btn  bg-danger"><i className="bi bi-file-earmark-minus-fill"></i>Delete</button>
 
-                <button onClick={ handleProgress } type="button" className={ `btn m-2 border ${ contact.progress === "false" ? "text-secondary bg-white" : "text-white bg-warning" }` }><i class="bi bi-star-fill"></i></button>
+                <button onClick={ handleProgress } type="button" className={ `btn m-2 border ${ contact.progress === "false" ? "text-secondary bg-white" : "text-white bg-warning" }` }><i className="bi bi-star-fill"></i></button>
 
-                <Link to="/edit" state={ contact }><i class="bi bi-pencil-square "></i></Link>
+                <Link to="/edit" state={ contact }><i className="bi bi-pencil-square "></i></Link>
 
             </form>
         </>

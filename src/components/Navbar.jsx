@@ -4,25 +4,16 @@ import { Link } from 'react-router-dom';
 export const Navbar = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="card-color center-nav navbar navbar-expand-lg navbar-light container d-flex justify-content-center rounded mt-1">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
-                        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" />
-                        Bootstrap
-                    </a>
-                </div>
 
-                <div className="container-fluid">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <Link to="/">Home</Link>
+                        <ul className="nav nav-pills menu-sidebar ps-2">
+                            <li className="nav-item p-0" >
+                                <Link to="/" className="nav-link text-center p-0" >Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/new-contact">Create Contact</Link>
+                                <Link to="/new-contact" className="nav-link p-0">Create-Contact</Link>
                             </li>
                         </ul>
                     </div>
