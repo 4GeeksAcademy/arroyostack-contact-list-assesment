@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const Navbar = () => {
     return (
         <>
-            <nav className="card-color center-nav navbar navbar-expand-lg navbar-light container d-flex justify-content-center rounded mt-1">
+            <nav className="card-color center-nav navbar navbar-expand-lg navbar-light container rounded mt-1 ">
                 <div className="container-fluid">
 
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">

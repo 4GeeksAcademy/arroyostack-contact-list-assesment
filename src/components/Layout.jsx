@@ -10,6 +10,7 @@ import { Footer } from './Footer';
 export const Layout = () => {
     return (
         < >
+            <Footer />
             <div className="container d-flex flex-column h-100">
 
                 <Navbar />
@@ -23,7 +24,7 @@ export const Layout = () => {
                 </ContactProvider>
 
             </div>
-            <Footer />
+
             {/* position: absolute;
 top: 0;
 bottom: 0;

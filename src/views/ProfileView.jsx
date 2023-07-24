@@ -7,16 +7,15 @@ export const ProfileView = () => {
     console.log(location.state);
     const { name, email, address, number, avatar, id, company, progress } = location.state;
     return (
-        <section className="vh-100" style={ { backgroundColor: "#f4f5f7;" } }>
-
+        <section className="vh-100 mt-0" style={ { backgroundColor: "#f4f5f7;" } }>
             <div className="row d-flex justify-content-center align-items-center h-100">
                 <div className="col col-lg-6 mb-4 mb-lg-0">
-                    <div className="card mb-3" style={ { borderRadius: ".5rem;" } }>
+                    <div className="card" style={ { borderRadius: ".5rem;" } }>
                         <div className="row g-0">
                             <div className="col-md-4 gradient-custom text-center text-white"
                                 style={ { borderTopLeftRadius: ".5rem", borderBottomLeftRadius: ".5rem;" } }>
                                 <img src={ avatar }
-                                    alt="Avatar" className=" my-5 rounded" style={ { width: "15rem" } } />
+                                    alt="Avatar" className="my-5  rounded" style={ { width: "10rem" } } />
                                 <h5>{ name }</h5>
 
                             </div>

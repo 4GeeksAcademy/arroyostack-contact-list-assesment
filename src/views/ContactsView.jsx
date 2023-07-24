@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ContactContext } from "../context/ContactContext";
 import { getContacts } from "../components/helpers/getContact";
 import { SingleContactCard } from "../components/SingleContactCard";
@@ -20,16 +20,19 @@ export const ContactsPage = () => {
 
 
     return (
-        <div className="d-flex flex-wrap justify-content-center">
 
-            { contacts && contacts.map(contact => {
+        <>
+            <div className="d-flex flex-wrap justify-content-center">
 
-                return (
-                    <div key={ contact.id } className="cover-image card d-flex justify-content-end m-3" style={ { backgroundImage: `url('${ contact.avatar || 'https://cdn-icons-png.flaticon.com/512/6915/6915987.png' }')` } }>
-                        <SingleContactCard contact={ contact } />
-                    </div>);
-            }) }
-        </div>
+                { contacts.map(contact => {
+
+                    return (
+                        <div key={ contact.id } className="cover-image card d-flex justify-content-end m-3" style={ { backgroundImage: `url('${ contact.avatar || 'https://cdn-icons-png.flaticon.com/512/6915/6915987.png' }')` } }>
+                            <SingleContactCard contact={ contact } />
+                        </div>);
+                }) }
+            </div>
+        </>
 
     );
 };

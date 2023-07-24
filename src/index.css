@@ -1,17 +1,20 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html {
     height: 100vh;
 }
 
-/* .container nav .center-nav {
+#navbarNavDropdown {
     display: flex !important;
     justify-content: center !important;
-} */
+    position: sticky;
+}
 
-#navbarNavDropdown {
-    display: flex;
-    justify-content: center;
+h6,
+footer h1,
+nav a {
+    font-family: 'Permanent Marker', cursive;
 }
 
 body {
@@ -62,4 +65,5 @@ a {
 
 .hide-show:hover form {
     display: block;
+
 }

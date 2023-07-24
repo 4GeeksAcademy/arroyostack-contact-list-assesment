@@ -148,7 +148,7 @@ export const EditContact = () => {
                     />
                 </div>
                 <div className="">
-                    <button type="submit" className="btn btn-primary me-3">Button</button>
+                    <button type="submit" className="btn btn-primary me-3">Update</button>
                     <button type="reset" className="btn btn-primary me-3" onClick={ handleReset }>Reset</button>
                 </div>
             </form>
