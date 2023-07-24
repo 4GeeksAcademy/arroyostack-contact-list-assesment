@@ -1,5 +1,5 @@
 export const addContact = async (contactObject, id) => {
-    const { name, address, phone, email, avatar } = contactObject;
+    const { name, address, number, email, avatar, company } = contactObject;
     const url = "http://localhost:8000/";
     const endpoint = "contacts";
 
@@ -10,10 +10,12 @@ export const addContact = async (contactObject, id) => {
     const raw = JSON.stringify({
         "name": name,
         "address": address,
-        "phone": phone,
+        "number": number,
         "email": email,
         "avatar": avatar,
-        "id": id
+        "id": id,
+        "company": company,
+        "progress": "false"
     });
 
     const requestOptions = {

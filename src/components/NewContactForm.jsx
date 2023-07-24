@@ -12,7 +12,7 @@ export const NewContactForm = () => {
     const [ email, setEmail ] = useState("");
     const [ address, setAddress ] = useState("");
     const [ number, setNumber ] = useState("");
-    const [ image, setImage ] = useState("");
+    const [ avatar, setAvatar ] = useState("");
     const [ company, setCompany ] = useState("");
 
     const newUSer = {
@@ -20,7 +20,7 @@ export const NewContactForm = () => {
         email,
         address,
         number,
-        image,
+        avatar,
         company
     };
 
@@ -51,8 +51,7 @@ export const NewContactForm = () => {
 
 
     // CONTROLLED INPUTS
-    const onNameChange = (event) => {
-        event.preventDefault();
+    const onNameChange = ({ target }) => {
         setName(event.target.value);
     };
     const onEmailChange = ({ target }) => {
@@ -64,8 +63,8 @@ export const NewContactForm = () => {
     const onNumberChange = ({ target }) => {
         setNumber(target.value);
     };
-    const onImageChange = ({ target }) => {
-        setImage(target.value);
+    const onAvatarChange = ({ target }) => {
+        setAvatar(target.value);
     };
     const onCompanyChange = ({ target }) => {
         setCompany(target.value);
@@ -74,7 +73,7 @@ export const NewContactForm = () => {
     return (
         <>
             { redirect && <Navigate replace to="/" /> }
-            <form className='container bg-light p-5 mt-5 rounded' onSubmit={ handleSubmit }>
+            <form className='container p-5 mt-5 rounded card-color ' onSubmit={ handleSubmit }>
                 <div className="input-group mb-3 row">
                     <label className="col-form-label" htmlFor="name"><h6>Name</h6></label>
                     <input id="name"
@@ -82,6 +81,7 @@ export const NewContactForm = () => {
                         value={ name }
                         onChange={ onNameChange }
                         className="form-control rounded"
+                        required
                     />
                 </div>
                 <div className="input-group mb-3 row">
@@ -91,6 +91,7 @@ export const NewContactForm = () => {
                         value={ email }
                         onChange={ onEmailChange }
                         className="form-control rounded"
+                        required
                     />
                 </div>
                 <div className="input-group mb-3 row">
@@ -100,6 +101,7 @@ export const NewContactForm = () => {
                         value={ address }
                         onChange={ onAddressChange }
                         className="form-control rounded"
+                        required
                     />
                 </div>
                 <div className="input-group mb-3 row">
@@ -109,15 +111,17 @@ export const NewContactForm = () => {
                         value={ number }
                         onChange={ onNumberChange }
                         className="form-control rounded w-50"
+                        required
                     />
                 </div>
                 <div className="input-group mb-3 row">
                     <label className="col-form-label" htmlFor="Image"><h6>Image</h6></label>
                     <input id="Image"
                         type="url"
-                        value={ image }
-                        onChange={ onImageChange }
+                        value={ avatar }
+                        onChange={ onAvatarChange }
                         className="form-control rounded w-50"
+
                     />
                 </div>
                 <div className="input-group mb-3 row">
@@ -127,6 +131,7 @@ export const NewContactForm = () => {
                         value={ company }
                         onChange={ onCompanyChange }
                         className="form-control rounded w-50"
+                        required
                     />
                 </div>
                 <div className="">

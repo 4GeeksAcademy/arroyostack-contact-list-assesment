@@ -1,6 +1,6 @@
-export const deleteTask = async (identifier) => {
+export const deleteContact = async (identifier) => {
     const url = "http://localhost:8000/";
-    const endpoint = "contacts";
+    const endpoint = "contacts/";
 
     const requestOptions = {
         method: 'DELETE',
@@ -16,6 +16,4 @@ export const deleteTask = async (identifier) => {
         console.log(error, "This was catch by catch block in 'deleteTask'");
 
     }
-
-
 };
